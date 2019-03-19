@@ -1,0 +1,7 @@
+version: '3'
+services:
+  poppler:
+    build: .
+    volumes:
+      - ${PWD}:/tmp/work/
+    command: "pdftoppm -png /tmp/work/pdf-file-name.pdf /tmp/work/prefix"
